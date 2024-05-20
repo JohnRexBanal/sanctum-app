@@ -34,5 +34,15 @@
     name: 'CreatePost'
   }
   </script>
+    
+<style scoped>
+.container {
+  max-width: 600px;
+}
+
+.card-header.bg-dark {
+  background-color: #343a40;
+}
+</style>
 
   
