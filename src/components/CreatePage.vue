@@ -37,12 +37,47 @@
     
 <style scoped>
 .container {
-  max-width: 600px;
+    max-width: 600px;
 }
 
 .card-header.bg-dark {
-  background-color: #343a40;
+    background-color: #343a40;
 }
+.card-body {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+  
+  .btn-primary:focus, .btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+  
+  .btn-lg {
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+}
+  
+  .form-control {
+    border-radius: 0.3rem;
+    border: 1px solid #ccc;
+}
+  
+  textarea.form-control {
+    resize: vertical;
+}
+  
 </style>
 
   
