@@ -21,6 +21,9 @@
             <div class="row justify-content-center">
               <div class="col-md-6"> 
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Post</button>
+                <div class="col-md-6">
+                <button type="button" class="btn btn-danger btn-lg btn-block">Discard</button>
+              </div>
               </div>
             </div>
           </form>
@@ -60,6 +63,20 @@
   
   .btn-primary:focus, .btn-primary.focus {
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+  
+  .btn-danger:focus, .btn-danger.focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
 }
   
   .btn-lg {
