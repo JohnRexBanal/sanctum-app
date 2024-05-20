@@ -20,7 +20,7 @@
             </div>
             <div class="row justify-content-center">
               <div class="col-md-6"> 
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Post</button>
               </div>
             </div>
           </form>
