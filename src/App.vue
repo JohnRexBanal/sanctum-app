@@ -2,7 +2,6 @@
   <div id="app">
   <!-- the router view is where all the routes are rendered -->
   <router-view/>
-  <CreatePage />
 </div>
 </template>
 

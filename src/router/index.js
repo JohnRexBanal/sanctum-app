@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginPage from '../components/LoginPage.vue'
 import RegisterPage from '../components/RegisterPage.vue'
 import HomePage from '../components/HomePage.vue'
+import CreatePage from '../components/CreatePage.vue';
 
 const routes = [
   { path: '/', component: LoginPage, name: 'login' },
@@ -28,6 +29,7 @@ const routes = [
       next('/');
     }
   },
+  { path: '/create', component: CreatePage, name: 'create' }
 ];
 
 const router = createRouter({
@@ -35,4 +37,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;
