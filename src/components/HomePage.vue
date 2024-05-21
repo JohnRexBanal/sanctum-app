@@ -86,11 +86,16 @@ export default {
     },
     async logout() {
       try {
-        const response = await axios.post(this.$root.$data.apiUrl + '/logout');
+        const token = localStorage.getItem('token');
+        const response = await axios.post(this.$root.$data.apiUrl + '/logout', {}, {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
         if (response && response.data && response.data.message) {
           console.log(response.data.message);
           localStorage.removeItem('token');
-          this.$router.push('/login');
+          this.$router.push('/');
         } else {
           console.error('Unexpected response structure:', response);
         }
