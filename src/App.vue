@@ -6,12 +6,8 @@
 </template>
 
 <script>
-import CreatePage from './components/CreatePage.vue';
 export default {
   name: 'App',
-  components: {
-    CreatePage
-  },
   data() {
     return {
       // assign in root component to easily change the api url in production environment
