@@ -79,7 +79,11 @@ export default {
         this.errors[field] = null;
       }
     },
-}
+    mounted() {
+      const postId = this.$route.params.id;
+      this.fetchPost(postId);
+    }
+  }
 </script>
 
 
