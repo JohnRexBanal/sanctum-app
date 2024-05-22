@@ -42,8 +42,26 @@ export default {
       id: ''
     };
   },
+  methods: {
+    async fetchPost(id) {
+      try {
+        const response = await axios.get(`${this.$root.$data.apiUrl}/edit/${id}`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`
+          }
+        });
+        this.id = id;
+        this.title = response.data.title;
+        this.body = response.data.body;
+      } catch (error) {
+        console.error('Error fetching post:', error);
+      }
+    },
+   
+  }
 }
 </script>
+
 
 
 
