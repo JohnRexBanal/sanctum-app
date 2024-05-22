@@ -75,7 +75,10 @@ export default {
           this.errors = error.response.data.errors;
         }
       },
-  }
+      clearErrors(field) {
+        this.errors[field] = null;
+      }
+    },
 }
 </script>
 
