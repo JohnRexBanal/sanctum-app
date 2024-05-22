@@ -4,11 +4,12 @@ import LoginPage from '../components/LoginPage.vue'
 import RegisterPage from '../components/RegisterPage.vue'
 import HomePage from '../components/HomePage.vue'
 import CreatePage from '../components/CreatePage.vue';
+import UpdatePage from '../components/UpdatePage.vue';
 
 const routes = [
   { path: '/', component: LoginPage, name: 'login' },
   { path: '/register', component: RegisterPage, name: 'register' },
-  { path: "update/:id", component: UpdatePage, name: 'update' }
+  { path: "update/:id", component: UpdatePage, name: 'update' },
   {
     path: '/home', component: HomePage, name: 'home',
     beforeEnter: (to, from, next) => {
