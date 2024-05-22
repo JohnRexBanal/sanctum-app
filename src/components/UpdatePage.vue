@@ -57,7 +57,24 @@ export default {
         console.error('Error fetching post:', error);
       }
     },
-   
+    async updatePost() {
+        try {
+          const response = await axios.put(`${this.$root.$data.apiUrl}/update/${this.id}`, {
+            title: this.title,
+            body: this.body,
+          }, {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+          });
+          if (response.status === 200) {
+            alert('Post updated successfully!');
+            this.$router.push('/home');
+          }
+        } catch (error) {
+          this.errors = error.response.data.errors;
+        }
+      },
   }
 }
 </script>
