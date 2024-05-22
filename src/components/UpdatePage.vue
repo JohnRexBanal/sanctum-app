@@ -30,3 +30,20 @@
     </div>
   </template>
 
+<script>
+import axios from 'axios';
+export default {
+  name: 'UpdatePost',
+  data() {
+    return {
+      title: '',
+      body: '',
+      errors: {},
+      id: ''
+    };
+  },
+}
+</script>
+
+
+
