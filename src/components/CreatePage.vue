@@ -5,18 +5,16 @@
           <h3>Create a New Post</h3>
         </div>
         <div class="card-body">
-          <form>
+          <form @submit.prevent="createPost">
             <div class="form-group">
               <label for="title">Title</label>
-              <input type="text" class="form-control" id="title" placeholder="Enter post title">
+              <input type="text" class="form-control" id="title" v-model="title" @input="clearErrors('title')" placeholder="Enter post title">
+              <small class="text-danger" v-if="errors.title">{{ errors.title[0] }}</small>
             </div>
             <div class="form-group mt-3">
               <label for="body">Body</label>
-              <textarea class="form-control" id="body" rows="5" placeholder="Enter post body"></textarea>
-            </div>
-            <div class="form-group mt-3">
-              <label for="authors">Authors</label>
-              <input type="text" class="form-control" id="authors" placeholder="Enter authors' names">
+              <textarea class="form-control" id="body" v-model="body" rows="5" @input="clearErrors('body')" placeholder="Enter post body"></textarea>
+              <small class="text-danger" v-if="errors.body">{{ errors.body[0] }}</small>
             </div>
             <div class="row">
             <div class="col">
