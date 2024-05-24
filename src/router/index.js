@@ -5,11 +5,32 @@ import RegisterPage from '../components/RegisterPage.vue'
 import HomePage from '../components/HomePage.vue'
 import CreatePage from '../components/CreatePage.vue';
 import UpdatePage from '../components/UpdatePage.vue';
+import ViewPage from '../components/ViewPage.vue';
 
 const routes = [
   { path: '/', component: LoginPage, name: 'login' },
   { path: '/register', component: RegisterPage, name: 'register' },
-  { path: "update/:id", component: UpdatePage, name: 'update' },
+  { 
+    path: "/update/:id", component: UpdatePage, name: 'update',
+    beforeEnter: (to, from, next) => {
+      // check if user is logged in and redirect to login page if not
+      if (localStorage.getItem('token')) {
+        next()
+      } else {
+        next('/')
+      }
+    }},
+  { 
+    path: '/view/:id', component: ViewPage, name: 'view',
+    beforeEnter: (to, from, next) => {
+      // check if user is logged in and redirect to login page if not
+      if (localStorage.getItem('token')) {
+        next()
+      } else {
+        next('/')
+      }
+    }
+    },
   {
     path: '/home', component: HomePage, name: 'home',
     beforeEnter: (to, from, next) => {
@@ -31,7 +52,17 @@ const routes = [
       next('/');
     }
   },
-  { path: '/create', component: CreatePage, name: 'create' }
+  { 
+    path: '/create', component: CreatePage, name: 'create',
+    beforeEnter: (to, from, next) => {
+      // check if user is logged in and redirect to login page if not
+      if (localStorage.getItem('token')) {
+        next()
+      } else {
+        next('/')
+      }
+    }
+    }
 ];
 
 const router = createRouter({
