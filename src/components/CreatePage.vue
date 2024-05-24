@@ -21,7 +21,7 @@
               <button type="submit" class="btn btn-primary btn-lg btn-block">Post</button>
             </div>
             <div class="col">
-              <button type="button" class="btn btn-danger btn-lg btn-block">Discard</button>
+              <router-link to="/home" class="btn btn-danger btn-lg btn-block">Discard</router-link>
             </div>
           </div>
           </form>
